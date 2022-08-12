@@ -1,0 +1,16 @@
+#img-box{
+
+    box-shadow: rgba(0, 0, 0, 0.40) 0px 22px 70px 4px;
+    height: 200px;
+    width: 200px;
+    margin-top:1rem ;
+
+
+    
+}
+#api-cont{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
