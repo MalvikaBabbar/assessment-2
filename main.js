@@ -12,12 +12,14 @@ document.querySelector("#search").addEventListener('click', (e) => {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const values = JSON.parse(xhr.responseText)
             console.log(values);
+            const albums = values.filter(album => album.albumId ==input)
+            console.log(albums);
             var output = ''
-            for (let i = 0; i < values.length; i++) {
+            for (let i = 0; i < albums.length; i++) {
                 output += `
                 
                 
-                <img id="img-box" src=${values[input-1].url} />
+                <img id="img-box" src=${albums[i].url} />
                 
             `
             }
