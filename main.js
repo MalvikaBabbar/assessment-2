@@ -1,9 +1,12 @@
+window.addEventListener('scroll', () => {
+    document.querySelector('nav').classList.toggle('window-scrolled', window.scrollY > 0)
+})
+
+/* =======Fetch API using AJAX(XHR)======*/
 document.querySelector("#search").addEventListener('click', (e) => {
     e.preventDefault();
     const xhr = new XMLHttpRequest()
     const input=document.querySelector("#input-box").value;
-
-
     const url = `https://jsonplaceholder.typicode.com/photos?utm_source=Mailerlite&utm_medium=E-mail&utm_campaign=Test%20Series&utm_term=2022-08-11`
 
     xhr.open('GET', url)
@@ -16,20 +19,14 @@ document.querySelector("#search").addEventListener('click', (e) => {
             console.log(albums);
             var output = ''
             for (let i = 0; i < albums.length; i++) {
-                output += `
                 
-                
-                <img id="img-box" src=${albums[i].url} />
-                
-            `
+                output += `<img id="img-box" src=${albums[i].url} />`
             }
-
+            
 
             document.querySelector('#api-cont').innerHTML = output
         }
     }
-
-
     xhr.send()
 }
 )
