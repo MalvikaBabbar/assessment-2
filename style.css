@@ -1,32 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 * {
     --transition: all 400ms ease;
 }
-
-
-.windows-scrolled {
-    background-color: rgba(129,133,188,1);
-    border-bottom: 0.2rem solid rgba(129,133,188,1);
-    box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
+h1{
+    font-size: 6rem;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
 }
-
+h2{
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:bolder;
+}
+p{
+    color: rgb(239, 250, 245);
+}
 
 /* =======Header======*/
 header{
-    width: auto;
-    height: auto;
+    width: 100vx;
+    height: 100vh;
     position: relative;
     top: 0;
-    background: linear-gradient(0deg, rgba(129,133,188,1) 0%, rgba(58,47,116,1) 50%, rgba(1,1,36,1) 100%);
-    /* background: linear-gradient(0deg, rgba(42,53,203,1) 0%, rgba(31,14,117,1) 50%, rgba(3,1,28,1) 100%); */
+    background: linear-gradient(0deg, rgb(238, 238, 246) 0%, rgb(91, 79, 151) 50%, rgba(1,1,36,1) 100%);
     overflow: hidden;
 }
 .header-cont{
     display: grid;
     grid-template-columns: 42% 52%;
-    gap: 6%;
-    margin-top: 10rem;
+    gap: 9%;
+    margin-top: 6rem;
     position: relative;
 }
 .header_image_bg{
@@ -67,6 +71,47 @@ header{
     width: 85%;
 }
 
+/*====Gallery Section====*/
+#gallery{
+    margin-top: 4rem;
+    background-color:rgb(238, 238, 246);
+}
+.gallery-head{
+    display: flex;
+    justify-content: space-between;
+}
+.gallery-title{
+    margin-top: 1.5rem;
+}
+.gallery-cont{
+    width: auto;
+}
+.swiper-wrapper{
+    margin-top: 1.5rem;
+    height: 37rem;
+    padding-bottom: 3rem;
+}
+.swiper-slide{
+    border: 0.3rem solid rgba(91, 79, 151,0.5);
+    height:fit-content;
+    max-height: 36rem;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.swiper-slide:hover{
+    box-shadow: 0 3rem 3rem rgba(0,0,0,0.2);
+}
+.swiper-slide img {
+    filter: saturate(0);
+    transition: var(--transition);
+}
+.swiper-slide:hover img{
+    filter: saturate(1);
+}
+.swiper-pagination-bullet {
+    background-color: orange;
+}
+
 /* ======API=======*/
 #img-box{
     box-shadow: rgba(58, 62, 58, 0.836) 0px 22px 70px 4px;
@@ -74,12 +119,90 @@ header{
     width: 150px;
     margin-top:1rem ;
 }
-/* .container-fluid{
-    overflow: hidden;
-} */
 #api-cont{
     margin-top: 2rem;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+
+/*=====media queries=====*/
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+    
+    
+    .container {
+        width: auto;
+        position: relative;
+    }
+    h1{
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+        color: black;
+        font-family: 'Montserrat', sans-serif;
+    }
+    p{
+        color: black;
+    }
+    h2{
+        font-size: 2.5rem;
+    }
+/* =======Header======*/
+    header{
+    width: auto;
+    height: auto;
+    position: relative;
+    top: 0;
+    background: linear-gradient(0deg, rgb(246, 173, 95) 0%, rgb(246, 160, 67) 50%, rgb(184, 103, 17) 100%);
+        overflow: hidden;
+    }
+    .header-cont{
+        display: grid;
+        grid-template-columns: 70% 25%;
+        gap: 8%;
+        margin-top: 2rem;
+        position: relative;
+    }
+    .header_image_bg{
+        background-color: rgba(215, 127, 12, 0.715);
+        height: 22rem;
+        width: 16rem;
+        position: absolute;
+    }
+    .header-right p{
+        margin-top: 3rem;
+            width: auto;
+        }
+/*====Gallery Section====*/
+    #gallery{
+        margin-top: 2rem;
+    }
+    .gallery-head{
+        display: flex;
+        justify-content: space-between;
+    }
+    .gallery-title{
+        margin-top: 1.5rem;
+    }
+    .gallery-cont{
+        width: auto;
+    }
+    .swiper-wrapper{
+        margin-top: 1.5rem;
+        height: 37rem;
+        padding-bottom: 3rem;
+    }
+    .swiper-slide{
+        border: 0.3rem solid rgb(246, 160, 67);
+        height:fit-content;
+        max-height: 36rem;
+        overflow: hidden;
+    }
+    .swiper-slide:hover{
+        box-shadow: 0 3rem 3rem rgba(0,0,0,0.2);
+    }
+    .swiper-pagination-bullet {
+        background-color: orange;
+    }
+    }
